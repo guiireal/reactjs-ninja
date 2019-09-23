@@ -13,8 +13,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.9.0/umd/react-dom.development.js"></script>
     
     <script>
-        var h1 = React.createElement('h1', null, 'Hello h1 React');
-        ReactDOM.render(h1, document.getElementById('app'));
+        var div = React.createElement('div', null, [
+            React.createElement('span', null, 'Span 1'),
+            React.createElement('span', null, 'Span 2')
+        ]);
+        ReactDOM.render(div, document.getElementById('app'));
     </script>
 </body>
 </html>
