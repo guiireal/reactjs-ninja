@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
+import Button from './Button'
+import Square from './Square'
 
 export default class App extends Component {
 
-    constructor() {
-        super();
-        this.state = {
-            text: 'Guilherme'
-        };
+    state = {
+        color: 'red'
     }
 
+
     render() {
-        return <div onClick={() => this.setState({text: 'França'})}>{this.state.text}</div>;
+        const colors = ['red', 'green', 'blue'];
+        return (
+            <div>
+                <Square color={this.state.color}/>
+                {colors.map(color => (
+                    <Button key={color} handleClick={() => this.setState({color})}>{color}</Button>
+                ))}
+            </div>
+        )
     }
 }
