@@ -1,12 +1,12 @@
 import React from 'react';
-import Title, { TitleExp } from './Title';
-import Square from './Square';
-
+import LikeButton from './LikeButton'
+import ShareButton from './ShareButton'
 
 const App = () => {
     return (
-        <div className='container' onClick={() => {alert('clicou')}}>
-            <Square />
+        <div>
+            <LikeButton />
+            <ShareButton />
         </div>
     );
 }
