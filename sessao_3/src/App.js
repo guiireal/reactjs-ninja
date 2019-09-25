@@ -1,11 +1,12 @@
 import React from 'react';
-import Title from './Title';
+import Title, { TitleExp } from './Title';
 
 
 const App = () => {
     return (
         <div className='container'>
-            <Title name='Guilherme' lastName={0}/>
+            <Title name='Guilherme' lastName='França'/>
+            <TitleExp />
             
         </div>
     );
