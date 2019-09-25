@@ -1,13 +1,14 @@
 import React from 'react';
 import Title, { TitleExp } from './Title';
+import Square from './Square';
 
 
 const App = () => {
     return (
         <div className='container'>
-            <Title name='Guilherme' lastName='França'/>
-            <TitleExp name='Daniele'/>
-            
+            {['blue', 'red', 'green', 'yellow'].map(color => (
+                <Square key={color} color={color}/>
+            ))}
         </div>
     );
 }
