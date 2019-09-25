@@ -1,15 +1,15 @@
-import React from 'react';
-import LikeButton from './LikeButton'
-import ShareButton from './ShareButton'
+import React, { Component } from 'react';
 
-const App = () => {
-    return (
-        <div>
-            <LikeButton />
-            <ShareButton />
-        </div>
-    );
+export default class App extends Component {
+
+    constructor() {
+        super();
+        this.state = {
+            text: 'Guilherme'
+        };
+    }
+
+    render() {
+        return <div onClick={() => this.setState({text: 'França'})}>{this.state.text}</div>;
+    }
 }
-
-
-export default App;
