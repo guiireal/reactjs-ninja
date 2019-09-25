@@ -6,7 +6,7 @@ const App = () => {
     return (
         <div className='container'>
             <Title name='Guilherme' lastName='França'/>
-            <TitleExp />
+            <TitleExp name='Daniele'/>
             
         </div>
     );

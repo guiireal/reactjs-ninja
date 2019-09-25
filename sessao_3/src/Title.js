@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 
 
-const TitleExp = () => <h1>Segundo Título</h1>
+const TitleExp = ({ name, lastName }) => 
+    <h1>Olá {name} {lastName}</h1>
+
+TitleExp.defaultProps = {
+    name: 'Desconhecido',
+    lastName: 'Sem Sobrenome',
+    skills: ['Java', 'React', 'React Native']
+}
 
 
 class Title extends Component {
