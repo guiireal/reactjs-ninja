@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
-import Button from './Button'
-import Square from './Square'
-
+import Timer from './Timer';
+import Button from './Button';
 export default class App extends Component {
 
+
     state = {
-        color: 'red'
+        showTimer: true
     }
 
+    handleClick = () => {
+        this.setState({showTimer: !this.state.showTimer})
+    }
 
     render() {
-        const colors = ['red', 'green', 'blue'];
         return (
             <div>
-                <Square color={this.state.color}/>
-                {colors.map(color => (
-                    <Button key={color} handleClick={() => this.setState({color})}>{color}</Button>
-                ))}
+                {this.state.showTimer && <Timer />}
+                <Button handleClick={this.handleClick}>Show / hide timer</Button>
             </div>
         )
     }
