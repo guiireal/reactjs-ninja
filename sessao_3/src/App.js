@@ -3,20 +3,22 @@ import Timer from './Timer';
 import Button from './Button';
 export default class App extends Component {
 
-
     state = {
+        time: 0,
         showTimer: true
     }
 
     handleClick = () => {
-        this.setState({showTimer: !this.state.showTimer})
+        this.setState({time: this.state.time + 10})
     }
 
     render() {
         return (
             <div>
-                {this.state.showTimer && <Timer />}
-                <Button handleClick={this.handleClick}>Show / hide timer</Button>
+                <Timer time={this.state.time}/>
+                <Button handleClick={this.handleClick}>
+                    Show / hide timer
+                </Button>
             </div>
         )
     }

@@ -10,6 +10,10 @@ class Timer extends Component {
         this.timer = null;
     }
 
+    UNSAFE_componentWillReceiveProps(nextProps) {
+        console.log(this.props, nextProps);
+    }
+
     componentDidMount() {
         this.timer = setInterval(() => {
             this.setState({time: this.state.time + 1})
